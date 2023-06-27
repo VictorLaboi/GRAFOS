@@ -7,12 +7,12 @@ namespace ListasSimplementeLigadas
     public class Nodo
     {
         public string Valor { get; set; }
-        public List<Nodo> Aristas { get; set; }
+        public Nodo Siguiente { get; set; }
 
-        public Nodo(string valor = "", Nodo enlace = null)
+        public Nodo(string valor = "", Nodo siguiente = null)
         {
             Valor = valor;
-            Aristas = new List<Nodo>();
+            Siguiente = siguiente;
         }
     }
 }

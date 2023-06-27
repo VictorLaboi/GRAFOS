@@ -1,30 +1,27 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace ListasSimplementeLigadas
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Lista list = new Lista();
+            
+            
+            Lista vertA = new Lista("A");
+            Lista vertB = new Lista("B");
+            Lista vertC = new Lista("C");
+            Lista vertD = new Lista("D");
 
-            list.AgregarNodo("A");
-            list.AgregarNodo("B");
-            list.AgregarNodo("C");
-            list.AgregarNodo("D");
-            list.AgregarNodo("E");
+            vertA.AgregarArit(vertB);
+            vertA.AgregarArit(vertC);
+            vertB.AgregarArit(vertD);
 
-            // Agregar aristas a la lista
-            list.AgregarArit(0, 1);
-            list.AgregarArit(0, 4);
-            list.AgregarArit(1, 2);
-            list.AgregarArit(1, 3);
-            list.AgregarArit(1, 4);
-            list.AgregarArit(2, 3);
-            list.AgregarArit(3, 4);
-
-            // Mostrar la lista
-            list.ImprimirGrafo();
+            Grafo.Add(vertA);
+            Grafo.Add(vertB);
+            Grafo.Add(vertC);
+            Grafo.Add(vertD);
+            Console.ReadKey();
         }
     }
 }
